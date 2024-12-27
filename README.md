@@ -9,7 +9,7 @@ _Windows filesystem notification library for Rust._
 
 Fork of [notify][original]
 
-- [Notify Documentation][notify-docs]
+- [Notify Documentation][notify-win-docs]
 - Minimum supported Rust version: **1.77**
 
 ## Platforms
