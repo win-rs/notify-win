@@ -38,3 +38,11 @@ windows-sys = { workspace = true, features = [
 
 [dev-dependencies]
 tempfile.workspace = true
+
+[package.metadata.docs.rs]
+default-target = "x86_64-pc-windows-msvc"
+targets = [
+    "aarch64-pc-windows-msvc",
+    "i686-pc-windows-msvc",
+    "x86_64-pc-windows-msvc",
+]
