@@ -97,8 +97,7 @@ impl Config {
         self.compare_contents
     }
 
-    /// For the [INotifyWatcher](crate::INotifyWatcher), [KqueueWatcher](crate::KqueueWatcher),
-    /// and [PollWatcher](crate::PollWatcher).
+    /// For PollWatcher](crate::PollWatcher).
     ///
     /// Determine if sybolic links should be followed when recursively watching a directory.
     ///
