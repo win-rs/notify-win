@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["notify-win", "notify-win-types", "win-file-id"]
+
+[workspace.package]
+homepage = "https://github.com/win-rs/notify-win"
+repository = "https://github.com/win-rs/notify.git"
+edition = "2021"
+
+[workspace.dependencies]
+crossbeam-channel = "0.5.0"
+filetime = "0.2.22"
+log = "0.4.17"
+notify-win = { version = "0.1.0", path = "notify-win" }
+notify-win-types = { version = "0.1.0", path = "notify-win-types" }
+win-file-id = { version = "0.1.0", path = "win-file-id" }
+rstest = "0.23.0"
+serde = { version = "1.0.89", features = ["derive"] }
+serde_jsonc2 = "0.1.0"
+tempfile = "3.10.0"
+walkdir = "2.4.0"
+windows-sys = "0.59.0"

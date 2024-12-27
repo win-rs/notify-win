@@ -1,0 +1,30 @@
+[package]
+name = "win-file-id"
+version = "0.1.0"
+description = "Utility for reading file IDs (Windows)"
+documentation = "https://docs.rs/notify-win"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+keywords = ["filesystem", "inode", "file", "index"]
+categories = ["filesystem"]
+authors = [
+    "Daniel Faust <hessijames@gmail.com>",
+    "0xJWLabs <0xjwlabs@gmail.com>",
+]
+edition.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "win-file-id"
+path = "bin/win_file_id.rs"
+
+[dependencies]
+serde = { workspace = true, optional = true }
+windows-sys = { workspace = true, features = [
+    "Win32_Storage_FileSystem",
+    "Win32_Foundation",
+] }
+
+[dev-dependencies]
+tempfile.workspace = true
