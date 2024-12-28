@@ -1,6 +1,6 @@
 [package]
 name = "notify-win"
-version = "0.1.0"
+version = "0.1.1"
 description = "Windows filesystem notification library"
 documentation = "https://docs.rs/notify-win"
 readme = "../README.md"
@@ -8,10 +8,10 @@ license = "CC0-1.0"
 keywords = ["events", "filesystem", "notify", "watch"]
 categories = ["filesystem"]
 authors = [
-    "Félix Saparelli <me@passcod.name>",
-    "Daniel Faust <hessijames@gmail.com>",
-    "Aron Heinecke <Ox0p54r36@t-online.de>",
-    "0xJWLabs <0xjwlabs@gmail.com>",
+  "Félix Saparelli <me@passcod.name>",
+  "Daniel Faust <hessijames@gmail.com>",
+  "Aron Heinecke <Ox0p54r36@t-online.de>",
+  "0xJWLabs <0xjwlabs@gmail.com>",
 ]
 edition.workspace = true
 homepage.workspace = true
@@ -28,12 +28,12 @@ filetime.workspace = true
 log.workspace = true
 walkdir.workspace = true
 windows-sys = { workspace = true, features = [
-    "Win32_System_Threading",
-    "Win32_Foundation",
-    "Win32_Storage_FileSystem",
-    "Win32_Security",
-    "Win32_System_WindowsProgramming",
-    "Win32_System_IO",
+  "Win32_System_Threading",
+  "Win32_Foundation",
+  "Win32_Storage_FileSystem",
+  "Win32_Security",
+  "Win32_System_WindowsProgramming",
+  "Win32_System_IO",
 ] }
 
 [dev-dependencies]
@@ -42,7 +42,7 @@ tempfile.workspace = true
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
 targets = [
-    "aarch64-pc-windows-msvc",
-    "i686-pc-windows-msvc",
-    "x86_64-pc-windows-msvc",
+  "aarch64-pc-windows-msvc",
+  "i686-pc-windows-msvc",
+  "x86_64-pc-windows-msvc",
 ]
