@@ -1,0 +1,25 @@
+[package]
+name = "notify-win-debouncer-mini"
+version = "0.1.0"
+description = "notify-win mini debouncer for events"
+documentation = "https://docs.rs/notify-win-debouncer-mini"
+authors = ["Aron Heinecke <Ox0p54r36@t-online.de>", "0xJWLabs@gmail.com"]
+keywords = ["events", "filesystem", "notify", "watch"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+edition.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[features]
+default = []
+serde = ["notify-win-types/serde"]
+crossbeam-channel = ["dep:crossbeam-channel", "notify-win/crossbeam-channel"]
+serialization-compat-6 = ["notify-win/serialization-compat-6"]
+
+[dependencies]
+notify-win.workspace = true
+notify-win-types.workspace = true
+crossbeam-channel = { workspace = true, optional = true }
+log.workspace = true
+tempfile.workspace = true

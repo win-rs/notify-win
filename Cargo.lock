@@ -250,8 +250,19 @@ dependencies = [
 ]
 
 [[package]]
-name = "notify-win-types"
+name = "notify-win-debouncer-mini"
 version = "0.1.0"
+dependencies = [
+ "crossbeam-channel",
+ "log",
+ "notify-win",
+ "notify-win-types",
+ "tempfile",
+]
+
+[[package]]
+name = "notify-win-types"
+version = "0.1.1"
 dependencies = [
  "rstest",
  "serde",
