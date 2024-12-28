@@ -5,6 +5,7 @@ members = [
   "notify-win-types",
   "win-file-id",
   "notify-win-debouncer-mini",
+  "notify-win-debouncer-full",
 ]
 
 [workspace.package]
@@ -17,8 +18,9 @@ crossbeam-channel = "0.5.0"
 filetime = "0.2.22"
 log = "0.4.17"
 notify-win = { version = "0.1.0", path = "notify-win" }
-notify-win-types = { version = "0.1.1", path = "notify-win-types" }
+notify-win-types = { version = "0.1.2", path = "notify-win-types" }
 notify-win-debouncer-mini = { version = "0.1.0", path = "notify-win-debouncer-mini" }
+notify-win-debouncer-full = { version = "0.1.0", path = "notify-win-debouncer-full" }
 win-file-id = { version = "0.1.0", path = "win-file-id" }
 rstest = "0.23.0"
 serde = { version = "1.0.89", features = ["derive"] }

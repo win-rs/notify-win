@@ -1,6 +1,6 @@
 [package]
 name = "notify-win-types"
-version = "0.1.1"
+version = "0.1.2"
 description = "Types used by the notify-win crate, fork of notify-types"
 documentation = "https://docs.rs/notify-win-types"
 readme = "../README.md"
