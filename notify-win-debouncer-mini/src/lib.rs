@@ -129,7 +129,7 @@ impl Config {
         self.batch_mode = batch_mode;
         self
     }
-    /// Set [`notify::Config`] for the backend
+    /// Set [`notify_win::Config`] for the backend
     pub fn with_notify_config(mut self, notify_config: notify_win::Config) -> Self {
         self.notify_config = notify_config;
         self
