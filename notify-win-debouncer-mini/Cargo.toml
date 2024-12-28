@@ -1,6 +1,6 @@
 [package]
 name = "notify-win-debouncer-mini"
-version = "0.1.0"
+version = "0.1.2"
 description = "notify-win mini debouncer for events"
 documentation = "https://docs.rs/notify-win-debouncer-mini"
 authors = ["Aron Heinecke <Ox0p54r36@t-online.de>", "0xJWLabs@gmail.com"]

@@ -1,6 +1,6 @@
 [package]
 name = "notify-win"
-version = "0.1.1"
+version = "0.1.2"
 description = "Windows filesystem notification library"
 documentation = "https://docs.rs/notify-win"
 readme = "../README.md"
