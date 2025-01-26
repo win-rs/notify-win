@@ -54,8 +54,7 @@
 //! When watching a very large amount of files, notify may fail to receive all events.
 //!
 //! ```rust
-//! # use std::path::Path;
-//! use notify_win::{recommended_watcher, Event, RecursiveMode, Result, Watcher};
+//! use notify_win::{Event, RecursiveMode, Result, Watcher};
 //! use std::sync::mpsc;
 //!
 //! fn main() -> Result<()> {
@@ -93,7 +92,7 @@
 //! all call the same event function. This can accommodate advanced behaviour or work around limits.
 //!
 //! ```rust
-//! # use notify_win::{RecommendedWatcher, RecursiveMode, Result, Watcher};
+//! # use notify_win::{RecursiveMode, Result, Watcher};
 //! # use std::path::Path;
 //! #
 //! # fn main() -> Result<()> {

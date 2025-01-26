@@ -206,7 +206,7 @@ impl ReadDirectoryChangesServer {
         };
         // every watcher gets its own semaphore to signal completion
         let semaphore = unsafe { CreateSemaphoreW(ptr::null_mut(), 0, 1, ptr::null_mut()) };
-        if semaphore == ptr::null_mut() || semaphore == INVALID_HANDLE_VALUE {
+        if semaphore.is_null() || semaphore == INVALID_HANDLE_VALUE {
             unsafe {
                 CloseHandle(handle);
             }
@@ -339,8 +339,7 @@ unsafe extern "system" fn handle_event(
         // filename length is size in bytes, so / 2
         let len = cur_entry.FileNameLength as usize / 2;
         let encoded_path: &[u16] = slice::from_raw_parts(
-            cur_offset.offset(std::mem::offset_of!(FILE_NOTIFY_INFORMATION, FileName) as isize)
-                as _,
+            cur_offset.add(std::mem::offset_of!(FILE_NOTIFY_INFORMATION, FileName)) as _,
             len,
         );
         // prepend root to get a full path
@@ -373,7 +372,6 @@ unsafe extern "system" fn handle_event(
             }
 
             let event_handler = |res| emit_event(&request.event_handler, res);
-
             if cur_entry.Action == FILE_ACTION_RENAMED_OLD_NAME {
                 let mode = RenameMode::From;
                 let kind = ModifyKind::Name(mode);
@@ -431,7 +429,7 @@ impl ReadDirectoryChangesWatcher {
         let (cmd_tx, cmd_rx) = unbounded();
 
         let wakeup_sem = unsafe { CreateSemaphoreW(ptr::null_mut(), 0, 1, ptr::null_mut()) };
-        if wakeup_sem == ptr::null_mut() || wakeup_sem == INVALID_HANDLE_VALUE {
+        if wakeup_sem.is_null() || wakeup_sem == INVALID_HANDLE_VALUE {
             return Err(Error::generic("Failed to create wakeup semaphore."));
         }
 
